@@ -9,7 +9,7 @@ def index():
     return 'server is running'
 
 
-@app.route('chat', methods=['POST'])
+@app.route('/chat', methods=['POST'])
 def chat():
     question = request.form['question']
     answer = chatgpt.ask(question)
